@@ -31,3 +31,5 @@ app.use('/blogs', blogRoutes);
 app.get('*', (req, res) => {
   res.status(404).render('404', { title: 'Page not found' })
 })
+
+module.exports = app;
