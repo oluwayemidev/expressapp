@@ -8,7 +8,7 @@ const app = express();
 const dbURI = 'mongodb+srv://admin:test123@node-tuts.fytvyoz.mongodb.net/'
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => app.listen(process.env.PORT || 4000))
+  .then((result) => app.listen(4000))
   .catch((err) => console.log(err));
 
 app.use(morgan('dev'));
