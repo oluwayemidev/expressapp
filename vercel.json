@@ -1,31 +1,9 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "index.js"
-      }
-    ],
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "server": "nodemon index.js",
-        "start": "node index.js"
-    },
-    "author": "Oluwayemi Dev",
-    "license": "ISC",
-    "dependencies": {
-        "ejs": "^3.1.9",
-        "express": "^4.19.1",
-        "mongoose": "^8.2.3",
-        "morgan": "^1.10.0"
-    },
-    "devDependencies": {
-        "nodemon": "^3.1.0"
-    }
-  }
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api"
+        }
+    ]
+}
